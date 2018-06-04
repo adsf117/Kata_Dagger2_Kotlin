@@ -7,17 +7,17 @@ import kotlinx.android.synthetic.main.activity_contact_list.*
 import puzzlebench.com.dagger2_kotlin_kata.di.ContactSurce
 import puzzlebench.com.dagger2_kotlin_kata.di.SERVER1
 import puzzlebench.com.dagger2_kotlin_kata.di.SERVER2
+import puzzlebench.com.dagger2_kotlin_kata.di.ServerVersionToUse
 import puzzlebench.com.dagger2_kotlin_kata.model.Contact
 import javax.inject.Inject
-import javax.inject.Named
 
 class ContactListActivity : AppCompatActivity() {
 
     @Inject
-    @field:Named(SERVER1)
+    @field:ServerVersionToUse(SERVER1)
     lateinit var contactFromServer1: Contact
     @Inject
-    @field:Named(SERVER2)
+    @field:ServerVersionToUse(SERVER2)
     lateinit var contatcFromServer2: Contact
 
 

@@ -12,13 +12,13 @@ const val SERVER2 = "Server2"
 @Module
 class ContactSurce {
     @Provides
-    @Named(SERVER1)
+    @ServerVersionToUse(SERVER1)
     fun getContatcFromServiceV1(): Contact {
         return Contact("Contact From Service Version 1 Using Dagger2")
     }
 
     @Provides
-    @Named(SERVER2)
+    @ServerVersionToUse(SERVER2)
     fun getContatcFromServiceV2(): Contact {
         return Contact("Contact From Service Version 2 Using Dagger2")
     }
