@@ -3,7 +3,6 @@ package puzzlebench.com.dagger2_kotlin_kata.di
 import dagger.Module
 import dagger.Provides
 import puzzlebench.com.dagger2_kotlin_kata.model.Contact
-import javax.inject.Named
 
 
 const val SERVER1 = "Server1"
