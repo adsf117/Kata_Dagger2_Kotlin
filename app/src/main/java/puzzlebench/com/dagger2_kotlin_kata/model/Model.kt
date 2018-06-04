@@ -1,5 +1,7 @@
 package puzzlebench.com.dagger2_kotlin_kata.model
 
-class Contact {
-    val contactName = "Some Contact Name"
+import javax.inject.Inject
+
+class Contact @Inject constructor() {
+    val contactName = "Some Contact Name using Dagger 2"
 }
