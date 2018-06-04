@@ -10,6 +10,7 @@ import puzzlebench.com.dagger2_kotlin_kata.di.SERVER2
 import puzzlebench.com.dagger2_kotlin_kata.di.ServerVersionToUse
 import puzzlebench.com.dagger2_kotlin_kata.model.Contact
 import javax.inject.Inject
+import javax.inject.Singleton
 
 class ContactListActivity : AppCompatActivity() {
 
@@ -30,6 +31,7 @@ class ContactListActivity : AppCompatActivity() {
     }
 }
 
+@Singleton
 @Component(modules = [ContactSurce::class])
 interface ContactMagicBox {
     fun inject(app: ContactListActivity)
