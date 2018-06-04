@@ -7,7 +7,7 @@ import puzzlebench.com.dagger2_kotlin_kata.model.Contact
 
 class ContactList : AppCompatActivity() {
 
-    var contact = Contact()
+    var contact = Contact() // replace by Dependency Injection
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_list)
