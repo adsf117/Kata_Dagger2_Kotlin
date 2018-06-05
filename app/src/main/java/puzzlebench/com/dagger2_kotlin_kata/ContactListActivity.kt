@@ -2,8 +2,8 @@ package puzzlebench.com.dagger2_kotlin_kata
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_contact_list.*
-import puzzlebench.com.dagger2_kotlin_kata.di.DaggerContactSurceComponent
 import puzzlebench.com.dagger2_kotlin_kata.di.SERVER1
 import puzzlebench.com.dagger2_kotlin_kata.di.SERVER2
 import puzzlebench.com.dagger2_kotlin_kata.di.ServerVersionToUse
@@ -23,7 +23,7 @@ class ContactListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_list)
-        DaggerContactSurceComponent.builder().build().inject(this)
+        AndroidInjection.inject(this)
         contact_name_server1_text_view.text = contactFromServer1.contactName
         contact_name_server2_text_view.text = contatcFromServer2.contactName
     }

@@ -3,6 +3,7 @@
     package="puzzlebench.com.dagger2_kotlin_kata">
 
     <application
+        android:name=".AppContactList"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
